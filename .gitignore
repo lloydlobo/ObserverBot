@@ -1,0 +1,18 @@
+# Secrets.
+CREDENTIALS.py
+.env
+
+# Database Files.
+*.sqlite
+*.db
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Notes, Ideas.
+*.md
+!README.md
+
+
