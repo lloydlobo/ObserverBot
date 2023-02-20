@@ -7,7 +7,6 @@ from discord.ext import commands
 from CREDENTIALS import *
 from DATA import *
 from db import DBHelper
-from plot import *
 
 ###############################################################################
 
@@ -31,8 +30,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-bot = commands.Bot(command_prefix="/",
-                   description=description, intents=intents)
+bot = commands.Bot(command_prefix="/", description=description, intents=intents)
 
 ###############################################################################
 
@@ -74,8 +72,7 @@ async def reflect(ctx):
 
     # Calculate score
     num_answers = len(QUESTIONS)
-    num_yes = sum(
-        1 for answer in answers if answer.content.lower() in ["yes", "y"])
+    num_yes = sum(1 for answer in answers if answer.content.lower() in ["yes", "y"])
     percentage = (num_yes / num_answers) * 100
 
     await ctx.send(f"Your progress score for this week is {percentage:.2f}%.")
